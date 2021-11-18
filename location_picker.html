@@ -1,0 +1,100 @@
+<!-- [START maps_map_simple] -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Location Picker</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <script src="./index.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container pt-5 px-2">
+        <div class="row pt-5 d-flex align-items-center justify-content-center my-auto">
+            <div class="card shadow-lg p-4  col-sm-8 col-md-6 justify-content-center">
+                <div class="card-title fw-bold text-center" style="font-size: 20px;">Location Picker</div>
+                <div class="row pt-3 px-3">
+                    <div class="col-5 pt-1">Location</div>
+                    <button type="button" class="col-6 btn btn-primary" data-toggle="modal" data-target="#myModal">
+                        Pick Location
+                    </button>
+
+                </div>
+                <div class="row pt-5 px-3">
+                    <div class="col-5">Address</div>
+                    <div class="col-6"><textarea class=" form-control" name="" id="address-label"></textarea></div>
+                </div>
+                <div class="row pt-5 px-3">
+                    <div class="col-5">Longitude</div>
+                    <input class="col-6" type="text" id="lng" value="">
+                </div>
+                <div class="row pt-5 px-3">
+                    <div class="col-5">Latitude</div>
+                    <input class="col-6" type="text" id="lat" value="">
+                </div>
+                <div class="row pt-5 px-3">
+                    <div class="col-5">City</div>
+                    <input class="col-6" type="text" id="city" value="">
+                </div>
+                <div class="row pt-5 px-3">
+                    <div class="col-5 ">State</div>
+                    <input class="col-6" type="text" id="state" value="">
+                </div>
+                <div class="row py-5 px-3">
+                    <div class="col-5">Country</div>
+                    <input class="col-6" type="text" id="country" value="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid">
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fw-bold" id="myModalLabel">Pick Your Location</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-12 modal_body_content">
+                                <h5 id="address-label-title">Your Address...</h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 modal_body_map">
+                                <div class="location-map" id="location-map">
+                                    <div style="width: 100%; height: 400px;" id="map"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+        <script
+            src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+</body>
+
+</html>
+<!-- [END maps_map_simple] -->
